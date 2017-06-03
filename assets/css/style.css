@@ -1,0 +1,48 @@
+body {
+   background: url(../images/back.jpg) no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+.centerpic {
+	margin-left: 400px;
+	display: block;
+	padding: 10px;
+	border: 3px solid black;
+}
+
+.centerpic {
+	margin-left: 420px;
+	display: inline-block;
+	padding: 10px;
+	border: 3px solid black;
+}
+
+h1 {
+	margin: auto;
+	position: relative;
+	left: 40%;
+	padding: 10px;
+	font-family: 'Audiowide', cursive;
+}
+
+h2 {
+	margin: auto;
+	position: relative;
+	left: 40%;
+	padding: 10px;
+	font-family: 'Audiowide', cursive;
+}
+
+.question {
+	margin-left: 350px;
+	padding: 10px;
+	border: 3px;
+}
+
+.answers {
+	margin-left: 350px;
+	display: block;
+	padding: 10px;
+	border: 3px;
+}
