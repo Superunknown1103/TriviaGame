@@ -1,29 +1,43 @@
 body {
-   background: url(../images/back.jpg) no-repeat;
+   background-color: grey;
         background-size: 100% 100%;
-        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
     }
 
 .centerpic {
-	margin-left: 400px;
 	display: block;
 	padding: 10px;
 	border: 3px solid black;
 }
 
-.centerpic {
-	margin-left: 420px;
-	display: inline-block;
+.start {
+	font-size: 32px;
+	width: 200px;
+	height: 100px;
+	margin: 10px;
 	padding: 10px;
 	border: 3px solid black;
+	background-color: blue;
+	color: white;
 }
 
+.start:hover {
+	cursor: pointer;
+	color: maroon;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 960px;
+}
 h1 {
 	margin: auto;
 	position: relative;
 	left: 40%;
 	padding: 10px;
 	font-family: 'Audiowide', cursive;
+	color: goldenrod;
 }
 
 h2 {
@@ -32,16 +46,16 @@ h2 {
 	left: 40%;
 	padding: 10px;
 	font-family: 'Audiowide', cursive;
+	color: silver;
 }
 
 .question {
-	margin-left: 350px;
 	padding: 10px;
 	border: 3px;
+	display: inline-block;
 }
 
 .answers {
-	margin-left: 350px;
 	display: block;
 	padding: 10px;
 	border: 3px;
