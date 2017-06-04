@@ -1,3 +1,5 @@
+var audio = new Audio('assets/javascript/carstartgarage.mp3');
+var song = new Audio('assets/javascript/highway.mp3');
 var questions = [
 	{
 		question: "When was the first Ford Mustang released?",
@@ -14,9 +16,30 @@ var questions = [
 
 
 $('#start').on('click', function() {
-	startGame();
+	presentGo();
 });
 
-function startGame(); {
-	
-}
+function presentGo() {
+
+	document.getElementById("go").style.visibility = "visible";
+	audio.play();
+
+};
+
+$('#go').on('click', function() {
+	runGame();
+});
+
+function runGame() {
+	document.getElementById("started").style.visibility = "visible";
+};
+
+$('#rock').click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     song.play();
+  } else {
+     song.pause();
+  }
+  $(this).data("clicks", !clicks);
+});

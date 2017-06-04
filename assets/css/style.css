@@ -1,14 +1,12 @@
 body {
-   background-color: grey;
-        background-size: 100% 100%;
+   background: #50394c;
         width: 100%;
         margin: 0 auto;
     }
 
 .centerpic {
-	display: block;
+	display: inline-block;
 	padding: 10px;
-	border: 3px solid black;
 }
 
 .start {
@@ -16,15 +14,47 @@ body {
 	width: 200px;
 	height: 100px;
 	margin: 10px;
-	padding: 10px;
 	border: 3px solid black;
-	background-color: blue;
+	background-color: #b2b2b2;
 	color: white;
+}
+
+.rock {
+	font-size: 32px;
+	width: 180px;
+	height: 100px;
+	margin: 10px;
+	border: 3px solid white;
+	background-color: black;
+	color: white;
+	display: inline-block;
+}
+
+.go {
+	font-size: 32px;
+	width: 150px;
+	height: 100px;
+	border: 3px solid white;
+	background-color: gray;
+	color: white;
+	margin: 10px;
+	display: inline-block;
+	position: relative;
 }
 
 .start:hover {
 	cursor: pointer;
-	color: maroon;
+	color: black;
+}
+
+.rock:hover {
+	cursor: pointer;
+	color: grey;
+}
+
+.go:hover {
+	cursor: pointer;
+	color: green;
 }
 
 .wrapper {
@@ -34,10 +64,10 @@ body {
 h1 {
 	margin: auto;
 	position: relative;
-	left: 40%;
+	left: 33%;
 	padding: 10px;
-	font-family: 'Audiowide', cursive;
-	color: goldenrod;
+	color: #ffef96;
+	font-size: 50px;
 }
 
 h2 {
@@ -45,18 +75,38 @@ h2 {
 	position: relative;
 	left: 40%;
 	padding: 10px;
-	font-family: 'Audiowide', cursive;
 	color: silver;
+
 }
 
 .question {
 	padding: 10px;
 	border: 3px;
 	display: inline-block;
+	position: absolute;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.question-box {
+	width: 960px;
+	height: 200px;
+	border: 10px solid orange;
+	background-color: #ffef96 ;
+	color: black;
+	margin: 10px;
 }
 
 .answers {
-	display: block;
+	display: inline-block;
 	padding: 10px;
 	border: 3px;
+	top: -500px;
+	font-family: 'Fjalla One', sans-serif;
 }
+
+#started {
+	visibility: hidden;
+}
+
+#go {
+	visibility: hidden;
