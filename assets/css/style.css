@@ -40,6 +40,28 @@ body {
 	margin: 10px;
 	display: inline-block;
 	position: relative;
+	float: right;
+}
+
+.timer {
+	font-size: 32px;
+	width: 180px;
+	height: 100px;
+	margin: 10px;
+	border: 3px solid white;
+	background-color: black;
+	color: white;
+	display: inline-block;
+	float: right;
+}
+
+.speed {
+	width: 135px;
+	height: 100px;
+	margin: 10px;
+	border: 3px solid black;
+	background-color: black;
+	display: inline-block;
 }
 
 .start:hover {
@@ -54,7 +76,12 @@ body {
 
 .go:hover {
 	cursor: pointer;
-	color: green;
+	background-color: green;
+}
+
+.timer:hover {
+	cursor: pointer;
+	color: red;
 }
 
 .wrapper {
@@ -88,7 +115,7 @@ h2 {
 }
 
 .question-box {
-	width: 960px;
+	width: 940px;
 	height: 200px;
 	border: 10px solid orange;
 	background-color: #ffef96 ;

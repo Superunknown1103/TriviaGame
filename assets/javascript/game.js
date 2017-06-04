@@ -1,5 +1,19 @@
+// music and sound
+
 var audio = new Audio('assets/javascript/carstartgarage.mp3');
 var song = new Audio('assets/javascript/highway.mp3');
+
+$('#rock').click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     song.play();
+  } else {
+     song.pause();
+  }
+  $(this).data("clicks", !clicks);
+});
+
+// questions
 var questions = [
 	{
 		question: "When was the first Ford Mustang released?",
@@ -14,6 +28,7 @@ var questions = [
 	}
 ];
 
+// jquery for dashboard
 
 $('#start').on('click', function() {
 	presentGo();
@@ -32,14 +47,27 @@ $('#go').on('click', function() {
 
 function runGame() {
 	document.getElementById("started").style.visibility = "visible";
-};
 
-$('#rock').click(function() {
-  var clicks = $(this).data('clicks');
-  if (clicks) {
-     song.play();
-  } else {
-     song.pause();
-  }
-  $(this).data("clicks", !clicks);
+	function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+jQuery(function ($) {
+    var fiveMinutes = 60 * 3,
+        display = $('#time');
+    startTimer(fiveMinutes, display);
 });
+};
