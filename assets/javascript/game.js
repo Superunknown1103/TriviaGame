@@ -13,35 +13,22 @@ $('#rock').click(function() {
   $(this).data("clicks", !clicks);
 });
 
-// questions
-var questions = [
-	{
-		question: "When was the first Ford Mustang released?",
-		answer: ["1962","1970", "1964", "1969"],
-		correctAnswer: "1964"
-	},
-	{
-		question: "Which classic car holds the world record for the most miles ever driven on one engine?",
-		answer: ["1966 Volvo P1800","1990 Honda Accord", "1996 Dodge 2500", "1989 Saab SPG"],
-		correctAnswer: "1966 Volvo P1800"
+// counter for answers
 
-	},
-	{
-		question: "Who manufactured this car?",
-		answer: ["Chrysler", "Ford", "Pontiac", "Dodge"],
-		correctAnswer: "Dodge"
-	},
-	{
-		question: "What year was the legendary 426 Hemi released?",
-		answer: ["1966", "1954", "1971", "1964"],
-		correctAnswer: "1964"
-	},
-	{
-		question: "Which car has more stock horsepower?",
-		answer: ["1972 Corvette", "1971 Challenger V8", "1971 Firebird", "1971 Mercedes 280SE"],
-		correctAnswer: "1971 Challenger V8"
-	}
-];
+var numCorrect = 0;
+var numWrong = 0;
+document.getElementById("correct").onclick = function () {
+	numCorrect++;
+};
+
+document.getElementById("incorrect").onclick = function () {
+	numWrong++;
+};
+
+
+document.getElementById("grade").onclick = function() {
+	alert("Incorrect: " + numWrong + ", " + "Correct: " + numCorrect);
+};
 
 // jquery for dashboard
 
@@ -79,9 +66,13 @@ function runGame() {
     }, 1000);
 }
 
-jQuery(function ($) {
-    var fiveMinutes = 60 * 3,
+$(function ($) {
+    var threeMinutes = 60 * 3,
         display = $('#time');
-    startTimer(fiveMinutes, display);
+    startTimer(threeMinutes, display);
 });
+};
+
+document.getElementById("grade").onclick = function() {
+	alert("Incorrect: " + numWrong + ", " + "Correct: " + numCorrect);
 };
