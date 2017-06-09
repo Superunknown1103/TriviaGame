@@ -17,18 +17,7 @@ $('#rock').click(function() {
 
 var numCorrect = 0;
 var numWrong = 0;
-document.getElementById("correct").onclick = function () {
-	numCorrect++;
-};
 
-document.getElementById("incorrect").onclick = function () {
-	numWrong++;
-};
-
-
-document.getElementById("grade").onclick = function() {
-	alert("Incorrect: " + numWrong + ", " + "Correct: " + numCorrect);
-};
 
 // jquery for dashboard
 
@@ -74,5 +63,13 @@ $(function ($) {
 };
 
 document.getElementById("grade").onclick = function() {
-	alert("Incorrect: " + numWrong + ", " + "Correct: " + numCorrect);
+  alert("Incorrect: " + numWrong + ", " + "Correct: " + numCorrect);
 };
+
+$("input[id='c']").change(function(){
+   numCorrect++;
+});
+
+$("input[id='q']").change(function () {
+  numWrong++;
+});
