@@ -50,7 +50,10 @@ function runGame() {
         display.text(minutes + ":" + seconds);
 
         if (--timer < 0) {
-            timer = duration;
+            alert("time is up");
+            alert("Incorrect: " + numWrong + ", " + "Correct: "+ numCorrect);
+            
+
         }
     }, 1000);
 }
