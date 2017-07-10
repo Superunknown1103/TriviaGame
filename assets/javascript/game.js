@@ -52,6 +52,7 @@ function runGame() {
         if (--timer < 0) {
             alert("time is up");
             alert("Incorrect: " + numWrong + ", " + "Correct: "+ numCorrect);
+            location.reload();
             
 
         }
