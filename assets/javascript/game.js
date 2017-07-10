@@ -67,6 +67,7 @@ $(function ($) {
 
 document.getElementById("grade").onclick = function() {
   alert("Incorrect: " + numWrong + ", " + "Correct: " + numCorrect);
+  location.reload();
 };
 
 $("input[id='c']").change(function(){
